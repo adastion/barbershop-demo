@@ -1,0 +1,48 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 44px;
+  color: $white;
+  background: $black;
+  border: none;
+  cursor: pointer;
+
+  @include tablet-and-bigger {
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+
+    @include small-phone-and-bigger {
+      margin: 0;
+      margin-right: 20px;
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    background: $sepia;
+  }
+
+  &--bg-other {
+    &--social {
+      width: 44px;
+
+      &:hover .footer__icon,
+      &:focus .footer__icon {
+        fill: $black;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $black;
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+---
+layout: default
+title: Shop
+on-shop: header__link--selected
+---
+<div class="block block--content-bg">
+  <div class="content">
+    <section class="heading">
+      <h1 class="heading__title">СРЕДСТВА ДЛЯ УХОДА</h1>
+      <ul class="heading__crumbs">
+        <li class="heading__item"><a href="index.html" class="heading__link">ГЛАВНАЯ</a></li>
+        <li class="heading__item"><a href="shop.html" class="heading__link">МАГАЗИН</a></li>
+        <li class="heading__item"><a href="#" class="heading__link">СРЕДСТВА ДЛЯ УХОДА</a></li>
+      </ul>
+    </section>
+    <div class="content__wrap-in-row">
+      <section class="filter">
+        <form action="" class="filter__form">
+          <div class="filter__block">
+            <h2 class="filter__title">ПРОИЗВОДИТЕЛИ:</h2>
+            <input id="checkbox_1" class="filter__input visually-hidden" type="checkbox" checked>
+            <label for="checkbox_1" class="filter__item-name">Baxter of California</label>
+            <input id="checkbox_2" class="filter__input visually-hidden" type="checkbox">
+            <label for="checkbox_2" class="filter__item-name">Mr Natty</label>
+            <input id="checkbox_3" class="filter__input visually-hidden" type="checkbox" checked disabled>
+            <label for="checkbox_3" class="filter__item-name">Suavecito</label>
+            <input id="checkbox_4" class="filter__input visually-hidden" type="checkbox" disabled>
+            <label for="checkbox_4" class="filter__item-name">Malin+Goetz</label>
+            <input id="checkbox_5" class="filter__input visually-hidden" type="checkbox">
+            <label for="checkbox_5" class="filter__item-name">Murray’s</label>
+            <input id="checkbox_6" class="filter__input visually-hidden" type="checkbox" checked>
+            <label for="checkbox_6" class="filter__item-name">American Crew</label>
+          </div>
+          <div class="filter__block">
+            <h2 class="filter__title">ГРУППЫ ТОВАРОВ:</h2>
+            <input id="radio_1" class="filter__input filter__input--radio visually-hidden" type="radio" name="r1">
+            <label for="radio_1" class="filter__item-name filter__item-name--radio">Бритвенные принадлежности</label>
+            <input id="radio_2" class="filter__input filter__input--radio visually-hidden" type="radio" name="r1"
+              checked disabled>
+            <label for="radio_2" class="filter__item-name filter__item-name--radio">Средства для ухода</label>
+            <input id="radio_3" class="filter__input filter__input--radio visually-hidden" type="radio" name="r1">
+            <label for="radio_3" class="filter__item-name filter__item-name--radio">Аксессуары</label>
+          </div>
+          <button class="btn filter__btn" type="submit">Показать</button>
+        </form>
+      </section>
+      <section class="products">
+        <ul class="products__list">
+          <li class="products__card">
+            <img src="assets/images/Layer 38.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Набор для путешествий</p>
+              <p class="products__name products__name--uppercase">«Baxter of California»</p>
+              <div class="products__wrap">
+                <span class="products__price">2 900 ₽</span>
+                <a href="product-item.html" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class="products__card">
+            <img src="assets/images/Layer 30.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Увлажняющий кондиционер</p>
+              <p class="products__name products__name--uppercase">«Baxter of California»</p>
+              <div class="products__wrap">
+                <span class="products__price">750 ₽</span>
+                <a href="#" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class="products__card">
+            <img src="assets/images/Layer 39.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Гель для волос</p>
+              <p class="products__name products__name--uppercase">«SUAVECITO»</p>
+              <div class="products__wrap">
+                <span class="products__price">290 ₽</span>
+                <a href="#" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class="products__card">
+            <img src="assets/images/Layer 32.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Глина для укладки волос</p>
+              <p class="products__name products__name--uppercase">«American crew»</p>
+              <div class="products__wrap">
+                <span class="products__price">500 ₽</span>
+                <a href="#" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class="products__card">
+            <img src="assets/images/Layer 33.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Гель для волос</p>
+              <p class="products__name products__name--uppercase">«AMERICAN CREW»</p>
+              <div class="products__wrap">
+                <span class="products__price">300 ₽</span>
+                <a href="#" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class="products__card">
+            <img src="assets/images/Layer 29.png" alt="products-preview" class="products__pic">
+            <div class="products__card-content">
+              <p class="products__name">Набор для бритья</p>
+              <p class="products__name products__name--uppercase">«Baxter of California»</p>
+              <div class="products__wrap">
+                <span class="products__price">3 900 ₽</span>
+                <a href="#" class="btn products__btn">КУПИТЬ</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="page-selected">
+          <li><a href="#" class="btn page-selected__btn">1</a></li>
+          <li><a href="#" class="btn page-selected__btn page-selected__btn--selected">2</a></li>
+          <li><a href="#" class="btn page-selected__btn">3</a></li>
+          <li><a href="#" class="btn page-selected__btn">4</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.content {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &__logo {
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  &__wrap-in-row {
+    @include small-desktop-and-bigger {
+      display: flex;
+    }
+  }
+}

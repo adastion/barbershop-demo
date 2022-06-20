@@ -1,0 +1,75 @@
+html {
+  @include main-copy-font;
+  color: $base-text-color;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  height: 100%;
+}
+
+header {
+  background: $black;
+}
+
+footer {
+  position: relative;
+  background: $mine_shaft;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-link-color;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include main-heading-font;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  @include small-phone-and-bigger {
+    font-size: 1.875rem;
+  }
+}
+
+h2 {
+  font-size:  1.5rem;
+
+  @include small-phone-and-bigger {
+    font-size: 1.875rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -1,0 +1,17 @@
+.page {
+  position: relative;
+  background: url("../images/background_index.jpg");
+  background: url("https://burobiz-a.akamaihd.net/uploads/images/52792/large_15058911268726844_5a25__1_.jpg");
+  background-size: cover;
+  padding: 60px 0;
+  z-index: 2;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba($black, 0.8);
+  }
+}

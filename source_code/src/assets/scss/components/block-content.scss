@@ -1,0 +1,174 @@
+.block-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 0 10px;
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+
+  @include tablet-and-bigger {
+    width: 50%;
+    padding: 0 40px;
+    align-items: flex-start;
+  }
+
+  @include desktop-and-bigger {
+    padding: 0 80px;
+  }
+
+  &:nth-child(odd) {
+    &::before {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotateX(79deg);
+      top: 100%;
+      filter: blur(4px);
+      content: "";
+      width: 278px;
+      height: 15px;
+      border-radius: 50%;
+      background: rgba($black, 0.3);
+
+      @include tablet-and-bigger {
+        top: 50%;
+        transform: translateY(-50%) rotateY(79deg);
+        left: 99%;
+        right: 0;
+        width: 15px;
+        height: 278px;
+      }
+    }
+  }
+
+  &--advantages {
+    padding: 0 10px;
+
+    &:nth-child(odd) {
+      &::before {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    
+    @include tablet-and-bigger {
+      margin: 0;
+    }
+  }
+  
+  &--width {
+    width: 100%;
+    padding: 0;
+    
+    @include tablet-and-bigger {
+            &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 1px;
+    text-align: center;
+    
+    @include tablet-and-bigger {
+      text-align: start;
+      margin-bottom: 30px;
+    }
+
+    &--first {
+      margin: 0 auto;
+      margin-bottom: 60px;
+
+      &::after {
+        position: absolute;
+        top: 55px;
+        left: 39%;
+        transform: rotate(45deg);
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: $white;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include tablet-and-bigger {
+      text-align: start;
+    }
+
+    &--advantages {
+      text-align: center;
+    }
+
+    &--color {
+      opacity: 0.5;
+    }
+  }
+
+  &__img {
+    width: 300px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border: 8px solid $white;
+    margin: 0;
+  }
+
+  &__wrap-btn {
+    @include small-phone-and-bigger {
+      display: flex;
+      margin-top: 35px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet-and-bigger {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  & label {
+    @include tablet-and-bigger {
+      width: 46%;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

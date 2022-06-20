@@ -1,0 +1,21 @@
+.list {
+  &__item {
+    position: relative;
+    margin-left: 20px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      left: -20px;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: $black;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

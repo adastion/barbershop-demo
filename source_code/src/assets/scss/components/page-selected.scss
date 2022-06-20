@@ -1,0 +1,38 @@
+.page-selected {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include small-desktop-and-bigger {
+    justify-content: flex-start;
+  }
+
+  & li:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 5px;
+  }
+
+  &__btn {
+    width: 44px;
+
+    &:hover {
+      background: $sepia;
+
+      & a:focus {
+        outline: none;
+        background: $sepia;
+      }
+    }
+
+    &--selected {
+      background: $white;
+      color: $black;
+
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $black;
+      }
+    }
+  }
+}

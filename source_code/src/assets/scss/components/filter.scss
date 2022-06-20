@@ -1,0 +1,115 @@
+.filter {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    @include phone-and-bigger {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around;
+      margin-bottom: 0;
+    }
+
+    @include small-desktop-and-bigger {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 60px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    @include phone-and-bigger {
+      width: 50%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+
+      &:nth-child(2n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    @include small-desktop-and-bigger {
+      width: 100%;
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    min-width: 175px;
+  }
+
+  &__input {
+    &:checked + .filter__item-name::before {
+      background: url("../images/svg/cross.svg") no-repeat center;
+    }
+
+    &--radio:checked + .filter__item-name--radio::before {
+      background: $black;
+      box-shadow: inset 0 0 0 3px $spring_wood;
+    }
+
+    &:disabled + {
+      .filter__item-name,
+      .filter__item-name::before {
+        opacity: 0.5;
+      }
+
+      .filter__item-name:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  &__item-name {
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 22px;
+    margin-left: 44px;
+
+    &:hover {
+      color: $sepia;
+    }
+
+    &::before {
+      position: absolute;
+      left: -44px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 18px;
+      height: 18px;
+      border: 2px solid $black;
+      cursor: pointer;
+    }
+
+    &--radio {
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__btn {
+    @include phone-and-bigger {
+      position: absolute;
+      bottom: 40px;
+      left: 52%;
+    }
+
+    @include small-desktop-and-bigger {
+      position: static;
+    }
+  }
+}
